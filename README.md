@@ -1,0 +1,1 @@
+This repository is dedicated to JavaScript problem-solving. I use it to practice coding challenges, sharpen my problem-solving skills, strengthen core JavaScript concepts, and continuously improve as a developer.
