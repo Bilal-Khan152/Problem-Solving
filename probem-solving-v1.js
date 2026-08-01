@@ -37,19 +37,43 @@
 // const arr = [1, 2, 3, 4, 5, 7, 8, 9, 10];
 // console.log(findMissigNum(arr));
 
- 
- const moveZerosToEnd = (arr) => {
-  let j = 0;
+//  const moveZerosToEnd = (arr) => {
+//   let j = 0;
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] !== 0) {
-      [arr[i], arr[j]] = [arr[j], arr[i]];
-      j++;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] !== 0) {
+//       [arr[i], arr[j]] = [arr[j], arr[i]];
+//       j++;
+//     }
+//   }
+
+//   return arr;
+// };
+
+// const arr = [0, 1, 0, 3, 12];
+// console.log(moveZerosToEnd(arr));
+
+// check if two strings are anagrams or not
+
+function anagramChecker(string1, string2) {
+  if (string1.length !== string2.length) {
+    console.log("Given strings are not anagrams");
+    return false;
+  }
+
+  const sortedString1 = string1.split("").sort().join("");
+  const sortedString2 = string2.split("").sort().join("");
+
+  for (let i = 0; i < sortedString1.length; i++) {
+    if (sortedString1[i] != sortedString2[i]) {
+      console.log("Given strings are not anagrams");
+      return false;
     }
   }
 
-  return arr;
-};
+  return true;
+}
 
-const arr = [0, 1, 0, 3, 12];
-console.log(moveZerosToEnd(arr));
+const string1 = "listen";
+const string2 = "silent";
+console.log(anagramChecker(string1, string2));
